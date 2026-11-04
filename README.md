@@ -1,0 +1,2 @@
+This is a tool which aims at helping people living in Geneva and surrounding areas make choices regarding where to spend the next ski weekend, given the budget, maximum distance (travel time), days spent at the trip, weather and overall ratings of the resorts. 
+We will then evaluate how well the prediction reflected reality based on the historic data.

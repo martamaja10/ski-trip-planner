@@ -1,0 +1,20 @@
+resort_id,name,country,lat,lon,village_alt_m,coords_source,base_alt_m,top_alt_m,piste_km,day_pass_adult_price,price_type,currency,drive_min_fri_1700_max,data_collected_on,source_resort
+1,Crans Montana,CH,46.31,7.48,1547,"estimated, checked against Open-Meteo geocoding (within 1 km)",1500,3000,140,94,fixed,CHF,200,05.11.2026,bergfex
+2,Verbier,CH,46.096,7.228,1501,"estimated, checked against Open-Meteo geocoding (within 1 km)",1500,3330,202,89,fixed,CHF,190,05.11.2026,bergfex
+3,Gstaad,CH,46.475,7.286,1055,"estimated, checked against Open-Meteo geocoding (within 1 km)",1000,3000,200,,dynamic,CHF,200,05.11.2026,bergfex
+4,Leysin - Les Mosses - La LŽcherette,CH,46.396,7.103,1433,"estimated, checked against Open-Meteo geocoding (within 1 km)",1250,2331,100,84,fixed,CHF,170,05.11.2026,bergfex
+5,Zermatt,CH,46.02,7.749,1608,"estimated, checked against Open-Meteo geocoding (within 1 km)",1620,3883,360,,dynamic,CHF,240,05.11.2026,bergfex
+6,Saas-Fee,CH,46.108,7.927,1800,"estimated, checked against Open-Meteo geocoding (within 1 km)",1800,3600,150,,dynamic,CHF,240,05.11.2026,bergfex
+7,Grindelwald,CH,46.624,8.041,1047,"estimated, checked against Open-Meteo geocoding (within 1 km)",937,2500,160,79,fixed,CHF,230,05.11.2026,bergfex
+8,Andermatt,CH,46.634,8.594,1441,"estimated, checked against Open-Meteo geocoding (within 1 km)",1444,2600,70,96,fixed,CHF,310,05.11.2026,bergfex
+9,Engelberg,CH,46.821,8.406,1015,"estimated, checked against Open-Meteo geocoding (within 1 km)",1050,3028,82,,dynamic,CHF,280,05.11.2026,bergfex
+10,Avoriaz,FR,46.192,6.77,1826,"estimated, checked against Open-Meteo geocoding (within 1 km)",974,2276,79,82,fixed,EUR,150,05.11.2026,bergfex
+11,Le Grand-Bornand,FR,45.943,6.428,919,"estimated, checked against Open-Meteo geocoding (within 1 km)",1000,2100,86,45,fixed,EUR,100,05.11.2026,bergfex
+12,Les Contamines,FR,45.822,6.727,1176,"estimated, checked against Open-Meteo geocoding (within 1 km)",1164,2487,120,65,fixed,EUR,120,05.11.2026,bergfex
+13,La Clusaz,FR,45.904,6.424,1095,"estimated, checked against Open-Meteo geocoding (within 1 km)",1100,2600,125,56.5,fixed,EUR,100,05.11.2026,bergfex
+14,Chamonix,FR,45.924,6.87,1060,"estimated, checked against Open-Meteo geocoding (within 1 km)",1035,3842,124,76.5,fixed,EUR,110,05.11.2026,bergfex
+15,Alpe d'Huez,FR,45.092,6.071,1827,"estimated, checked against Open-Meteo geocoding (within 1 km)",1860,3330,250,,dynamic,EUR,220,05.11.2026,bergfex
+16,Les 2 Alps,FR,45.012,6.123,1650,"estimated, checked against Open-Meteo geocoding (within 1 km)",1650,3600,220,68,fixed,EUR,220,05.11.2026,bergfex
+17,Courmayeur,IT,45.797,6.969,1224,"estimated, checked against Open-Meteo geocoding (within 1 km)",1208,2763,42,69,fixed,EUR,130,05.11.2026,bergfex
+18,Pila,IT,45.687,7.31,1821,"estimated, checked against Open-Meteo geocoding (within 1 km)",1800,2709,70,53,fixed,EUR,190,05.11.2026,bergfex
+19,La Thuile,IT,45.714,6.95,1441,"estimated, checked against Open-Meteo geocoding (within 1 km)",1441,2800,154,56,fixed,EUR,150,05.11.2026,bergfex

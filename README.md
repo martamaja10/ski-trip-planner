@@ -115,7 +115,7 @@ data/
   interim/
     open_meteo_validation/      # validation reports
     weather_point_validation/   # candidate/review outputs
-  processed/
+  processed/                    # the processed files are committed for convenience; see Build the processed dataset to regenerate them.
     weather_hourly.parquet
     flagged_snow_depth_anomalies.parquet
 scripts/
@@ -179,6 +179,8 @@ python src/ski_planner/build_dataset.py
 ```
 
 By default this reads `data/raw/open-meteo/` and writes `data/processed/weather_hourly.parquet` and `data/processed/flagged_snow_depth_anomalies.parquet` (use `--raw-dir` and `--out-dir` to change the locations). The script stops if a request was not made with `timezone=UTC`, if the schema is wrong, or if the Parquet file it wrote does not match the raw responses. Raw files are never modified. The notebook loads the resulting Parquet file instead of rebuilding it.
+
+The processed Parquet files are committed for convenience. They are derived from the raw responses, which are not committed (data/raw/), so regenerating them takes two steps: ingest the five seasons (see Ingest historical weather), then run python src/ski_planner/build_dataset.py.
 
 ### Validate ski-area weather-point candidates
 

@@ -6,9 +6,9 @@ Given a target weekend and constraints such as budget, driving time and trip len
 
 ## Project status
 
-**Completed:** resort reference data, historical weather ingestion, archive validation, exploratory data analysis, a reproducible build script for the structured Parquet dataset (with unit tests and validation against the raw responses) and rule-based snow-depth anomaly flagging.
+**Completed:** resort reference data, historical weather ingestion, archive validation, exploratory data analysis, reproducible Parquet dataset generation, snow-depth anomaly flagging, and SQL-based aggregation, feature engineering and consistency checks.
 
-**Next:** further data-quality checks and learned anomaly detection, SQL exploration, feature engineering, predictive modelling, destination ranking and accommodation matching.
+**Next:** further data-quality checks and learned anomaly detection, feature engineering, predictive modelling, destination ranking and accommodation matching.
 
 ## Project scope
 
@@ -93,6 +93,22 @@ Exploration in `notebooks/01_weather_data_exploration.ipynb` covered data comple
 - Snow depth generally builds through winter, with a seasonal peak around March and a slight decline in April.
 - Snow-depth and snowfall rankings differ between destinations, so snowfall alone is not a proxy for snow conditions.
 - Correlations calculated across all resorts and seasons should be interpreted cautiously because they combine destinations, elevations and time periods.
+
+## SQL Analytics & Data Quality
+
+The processed weather dataset is analysed using DuckDB and SQL, providing a reproducible analytical layer on top of the hourly Parquet data.
+
+Five SQL queries cover the main analytical steps:
+
+- **Coverage validation:** Checks hourly data completeness for each weather point and ski season, identifying missing hours, duplicate timestamps, and deviations from expected date boundaries.
+- **Daily aggregation:** Aggregates hourly weather observations into daily metrics, including temperature, precipitation, snowfall, snow depth and wind.
+- **Rolling weather features:** Calculates rolling 3-day and 7-day snowfall, 7-day average temperature, and snow-depth features to capture recent weather conditions.
+- **Destination comparison:** Summarises seasonal weather metrics to enable comparisons between ski destinations.
+- **Consistency checks:** Validates aggregation results against the hourly dataset and verifies data-quality flag logic.
+
+The SQL workflows are executed using DuckDB against Parquet datasets, with query results exported to CSV for downstream analysis.
+
+The pipeline includes consistency checks to verify aggregation accuracy and data integrity. 
 
 ## Limitations
 
@@ -200,11 +216,10 @@ python -m unittest discover -s tests -v
 
 ## Next steps
 
-1. Build a SQL layer (DuckDB) and explore the weather archive with documented analytical queries that answer specific questions.
-2. Extend the data-quality checks (abrupt jumps and flat-lined stretches), then compare the rule-based flags with a learned anomaly detector on the hourly series, using the Zermatt observations as a known test case.
-3. Develop prediction features from historical weather data (e.g. recent snowfall, snow depth and temperature). Train models to estimate future ski conditions and evaluate performance on a winter season not used during training, comparing against simple baseline predictions.
-4. Develop destination filtering and ranking logic, then evaluate rankings against realised weekend conditions.
-5. Add accommodation data and complete the project write-up.
+1. Extend the data-quality checks (abrupt jumps and flat-lined stretches), then compare the rule-based flags with a learned anomaly detector on the hourly series, using the Zermatt observations as a known test case.
+2. Develop prediction features from historical weather data (e.g. recent snowfall, snow depth and temperature). Train models to estimate future ski conditions and evaluate performance on a winter season not used during training, comparing against simple baseline predictions.
+3. Develop destination filtering and ranking logic, then evaluate rankings against realised weekend conditions.
+4. Add accommodation data and complete the project write-up.
 
 ## Data sources and attribution
 
